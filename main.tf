@@ -23,7 +23,7 @@ variable "vpc_cidr_block" {
 resource "alicloud_vswitch" "default" {
   vswitch_name = var.vs_name
   cidr_block = var.vs_cidr_block
-  vpc_id = alicloud_vpc_default.id
+  vpc_id = alicloud_vpc.default.id
   zone_id = var.az
 }
 variable "vs_name" {
