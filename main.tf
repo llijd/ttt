@@ -36,5 +36,5 @@ variable "vs_cidr_block" {
 }
 variable "az" {
   type        = string
-  default = "cn-hangzhou-a"
+  default = "cn-hangzhou-e"
 }
