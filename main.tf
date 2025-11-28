@@ -1,4 +1,5 @@
 variable "region" {
+  type = string
   default = "cn-hangzhou"
 }
 
@@ -12,9 +13,11 @@ resource "alicloud_vpc"  "default" {
 }
 
 variable "vpc_name" {
+    type  = string
     default = "vpc_test"
   }
-  variable "vpc_cidr_block" {
+variable "vpc_cidr_block" {
+    type        = string
   default = "172.16.0.0/12"
 }
 resource "alicloud_vswitch" "default" {
@@ -24,11 +27,14 @@ resource "alicloud_vswitch" "default" {
   zone_id = var.az
 }
 variable "vs_name" {
+  type        = string
   default = "VS_test"
 }
 variable "vs_cidr_block" {
+    type        = string
   default = "172.16.0.0/21"
 }
 variable "az" {
+  type        = string
   default = "cn-hangzhou-a"
 }
